@@ -790,8 +790,8 @@
           </h3>
           <div class="g2">
             <div>
-              <label>Market</label
-              ><select id="mk" style="display: none">
+              <label>Market</label>
+              <select id="mk" style="display: none">
                 <option value=""></option>
                 <option>EUR/USD</option>
                 <option>GBP/USD</option>
@@ -813,6 +813,49 @@
                 <option>CHF/JPY</option>
                 <option>EUR/CHF</option>
                 <option>GBP/AUD</option>
+                <option>USD/PKR (OTC)</option>
+                <option>EUR/NZD (OTC)</option>
+                <option>NZD/CAD (OTC)</option>
+                <option>USD/IDR (OTC)</option>
+                <option>USD/INR (OTC)</option>
+                <option>USD/BRL (OTC)</option>
+                <option>NZD/CHF (OTC)</option>
+                <option>NZD/JPY (OTC)</option>
+                <option>USD/ARS (OTC)</option>
+                <option>USD/COP (OTC)</option>
+                <option>USD/MXN (OTC)</option>
+                <option>USD/NGN (OTC)</option>
+                <option>AUD/NZD (OTC)</option>
+                <option>USD/EGP (OTC)</option>
+                <option>USD/BDT (OTC)</option>
+                <option>GBP/NZD (OTC)</option>
+                <option>CAD/CHF (OTC)</option>
+                <option>EUR/GBP (OTC)</option>
+                <option>USD/PHP (OTC)</option>
+                <option>USD/DZD (OTC)</option>
+                <option>USD/ZAR (OTC)</option>
+                <option>NZD/USD (OTC)</option>
+                <option>Trump (OTC)</option>
+                <option>Axie Infinity (OTC)</option>
+                <option>Polkadot (OTC)</option>
+                <option>Bitcoin Cash (OTC)</option>
+                <option>Ethereum (OTC)</option>
+                <option>Avalanche (OTC)</option>
+                <option>Zcash (OTC)</option>
+                <option>Dash (OTC)</option>
+                <option>Toncoin (OTC)</option>
+                <option>Chainlink (OTC)</option>
+                <option>Ripple (OTC)</option>
+                <option>Binance Coin (OTC)</option>
+                <option>Litecoin (OTC)</option>
+                <option>Ethereum Classic (OTC)</option>
+                <option>Cosmos (OTC)</option>
+                <option>Bitcoin (OTC)</option>
+                <option>Solana (OTC)</option>
+                <option>UKBrent (OTC)</option>
+                <option>Gold (OTC)</option>
+                <option>USCrude (OTC)</option>
+                <option>Silver (OTC)</option>
                 <option>Nikkei 225</option>
                 <option>S&amp;P/ASX 200</option>
                 <option>FTSE China A50 Index</option>
@@ -820,8 +863,9 @@
                 <option>FTSE 100</option>
                 <option>Hong Kong 50</option>
                 <option>IBEX 35</option>
-                <option>EURO STOXX 50</option></select
-              ><button class="mkb" id="mkb" type="button" onclick="openMk()">
+                <option>EURO STOXX 50</option>
+              </select>
+              <button class="mkb" id="mkb" type="button" onclick="openMk()">
                 <span id="mkl">Select market</span><span class="ch">▾</span>
               </button>
             </div>
@@ -892,6 +936,7 @@
         </div>
       </div>
     </main>
+
     <div id="pm">
       <div
         class="card"
@@ -909,6 +954,7 @@
         </div>
       </div>
     </div>
+
     <div id="cm">
       <div class="card">
         <h3
@@ -965,6 +1011,7 @@
         </div>
       </div>
     </div>
+
     <div id="mm">
       <div class="card">
         <div class="mmt">
@@ -983,6 +1030,7 @@
         <div class="mml" id="mml"></div>
       </div>
     </div>
+
     <script>
       const $ = (i) => document.getElementById(i),
         K = "tj_simple3";
@@ -1855,6 +1903,53 @@
           "CHF/JPY",
           "EUR/CHF",
           "GBP/AUD",
+          "USD/PKR (OTC)",
+          "EUR/NZD (OTC)",
+          "NZD/CAD (OTC)",
+          "USD/IDR (OTC)",
+          "USD/INR (OTC)",
+          "USD/BRL (OTC)",
+          "NZD/CHF (OTC)",
+          "NZD/JPY (OTC)",
+          "USD/ARS (OTC)",
+          "USD/COP (OTC)",
+          "USD/MXN (OTC)",
+          "USD/NGN (OTC)",
+          "AUD/NZD (OTC)",
+          "USD/EGP (OTC)",
+          "USD/BDT (OTC)",
+          "GBP/NZD (OTC)",
+          "CAD/CHF (OTC)",
+          "EUR/GBP (OTC)",
+          "USD/PHP (OTC)",
+          "USD/DZD (OTC)",
+          "USD/ZAR (OTC)",
+          "NZD/USD (OTC)",
+        ],
+        cry: [
+          ["Trump (OTC)", "T", "#3a3320"],
+          ["Axie Infinity (OTC)", "A", "#0055d5"],
+          ["Polkadot (OTC)", "●", "#e6007a"],
+          ["Bitcoin Cash (OTC)", "₿", "#8dc351"],
+          ["Ethereum (OTC)", "Ξ", "#627eea"],
+          ["Avalanche (OTC)", "A", "#e84142"],
+          ["Zcash (OTC)", "Z", "#f4b728"],
+          ["Dash (OTC)", "D", "#008ce7"],
+          ["Toncoin (OTC)", "T", "#0098ea"],
+          ["Chainlink (OTC)", "⬡", "#2a5ada"],
+          ["Ripple (OTC)", "✕", "#23292f"],
+          ["Binance Coin (OTC)", "B", "#f3ba2f"],
+          ["Litecoin (OTC)", "Ł", "#345d9d"],
+          ["Ethereum Classic (OTC)", "Ξ", "#328332"],
+          ["Cosmos (OTC)", "⚛", "#2e3148"],
+          ["Bitcoin (OTC)", "₿", "#f7931a"],
+          ["Solana (OTC)", "S", "#6a3fd1"],
+        ],
+        com: [
+          ["UKBrent (OTC)", "Br", "#3b3b44"],
+          ["Gold (OTC)", "Au", "#d4af37"],
+          ["USCrude (OTC)", "Cr", "#4a4a52"],
+          ["Silver (OTC)", "Ag", "#9aa0a6"],
         ],
         stk: [
           ["Nikkei 225", "jp"],
@@ -1867,8 +1962,33 @@
           ["EURO STOXX 50", "eu"],
         ],
       };
+      const CC = {
+        USD: "us",
+        EUR: "eu",
+        GBP: "gb",
+        JPY: "jp",
+        AUD: "au",
+        CAD: "ca",
+        CHF: "ch",
+        NZD: "nz",
+        PKR: "pk",
+        IDR: "id",
+        INR: "in",
+        BRL: "br",
+        ARS: "ar",
+        COP: "co",
+        MXN: "mx",
+        NGN: "ng",
+        EGP: "eg",
+        BDT: "bd",
+        PHP: "ph",
+        DZD: "dz",
+        ZAR: "za",
+      };
       const TABS = [
         ["cur", "Currencies"],
+        ["cry", "Crypto"],
+        ["com", "Commodities"],
         ["stk", "Stocks"],
       ];
       let mkTab = "cur",
@@ -1878,6 +1998,31 @@
         FAV = JSON.parse(localStorage.getItem("tj_fav")) || [];
       } catch (e) {}
       const FLS = {
+        us: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#fff"/><rect x="0" y="0.0" width="36" height="2.769230769230769" fill="#b22234"/><rect x="0" y="5.538461538461538" width="36" height="2.769230769230769" fill="#b22234"/><rect x="0" y="11.076923076923077" width="36" height="2.769230769230769" fill="#b22234"/><rect x="0" y="16.615384615384617" width="36" height="2.769230769230769" fill="#b22234"/><rect x="0" y="22.153846153846153" width="36" height="2.769230769230769" fill="#b22234"/><rect x="0" y="27.692307692307693" width="36" height="2.769230769230769" fill="#b22234"/><rect x="0" y="33.23076923076923" width="36" height="2.769230769230769" fill="#b22234"/><rect x="0" y="0" width="17" height="19.4" fill="#3c3b6e"/><circle cx="3.0" cy="3.0" r="0.9" fill="#fff" /><circle cx="8.2" cy="3.0" r="0.9" fill="#fff" /><circle cx="13.4" cy="3.0" r="0.9" fill="#fff" /><circle cx="3.0" cy="7.6" r="0.9" fill="#fff" /><circle cx="8.2" cy="7.6" r="0.9" fill="#fff" /><circle cx="13.4" cy="7.6" r="0.9" fill="#fff" /><circle cx="3.0" cy="12.2" r="0.9" fill="#fff" /><circle cx="8.2" cy="12.2" r="0.9" fill="#fff" /><circle cx="13.4" cy="12.2" r="0.9" fill="#fff" /><circle cx="3.0" cy="16.799999999999997" r="0.9" fill="#fff" /><circle cx="8.2" cy="16.799999999999997" r="0.9" fill="#fff" /><circle cx="13.4" cy="16.799999999999997" r="0.9" fill="#fff" /></svg>',
+        eu: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#039"/><polygon points="27.00,16.00 27.47,17.35 28.90,17.38 27.76,18.25 28.18,19.62 27.00,18.80 25.82,19.62 26.24,18.25 25.10,17.38 26.53,17.35" fill="#fc0" /><polygon points="25.79,20.50 26.26,21.85 27.70,21.88 26.56,22.75 26.97,24.12 25.79,23.30 24.62,24.12 25.03,22.75 23.89,21.88 25.32,21.85" fill="#fc0" /><polygon points="22.50,23.79 22.97,25.15 24.40,25.18 23.26,26.04 23.68,27.41 22.50,26.59 21.32,27.41 21.74,26.04 20.60,25.18 22.03,25.15" fill="#fc0" /><polygon points="18.00,25.00 18.47,26.35 19.90,26.38 18.76,27.25 19.18,28.62 18.00,27.80 16.82,28.62 17.24,27.25 16.10,26.38 17.53,26.35" fill="#fc0" /><polygon points="13.50,23.79 13.97,25.15 15.40,25.18 14.26,26.04 14.68,27.41 13.50,26.59 12.32,27.41 12.74,26.04 11.60,25.18 13.03,25.15" fill="#fc0" /><polygon points="10.21,20.50 10.68,21.85 12.11,21.88 10.97,22.75 11.38,24.12 10.21,23.30 9.03,24.12 9.44,22.75 8.30,21.88 9.74,21.85" fill="#fc0" /><polygon points="9.00,16.00 9.47,17.35 10.90,17.38 9.76,18.25 10.18,19.62 9.00,18.80 7.82,19.62 8.24,18.25 7.10,17.38 8.53,17.35" fill="#fc0" /><polygon points="10.21,11.50 10.68,12.85 12.11,12.88 10.97,13.75 11.38,15.12 10.21,14.30 9.03,15.12 9.44,13.75 8.30,12.88 9.74,12.85" fill="#fc0" /><polygon points="13.50,8.21 13.97,9.56 15.40,9.59 14.26,10.45 14.68,11.82 13.50,11.01 12.32,11.82 12.74,10.45 11.60,9.59 13.03,9.56" fill="#fc0" /><polygon points="18.00,7.00 18.47,8.35 19.90,8.38 18.76,9.25 19.18,10.62 18.00,9.80 16.82,10.62 17.24,9.25 16.10,8.38 17.53,8.35" fill="#fc0" /><polygon points="22.50,8.21 22.97,9.56 24.40,9.59 23.26,10.45 23.68,11.82 22.50,11.01 21.32,11.82 21.74,10.45 20.60,9.59 22.03,9.56" fill="#fc0" /><polygon points="25.79,11.50 26.26,12.85 27.70,12.88 26.56,13.75 26.97,15.12 25.79,14.30 24.62,15.12 25.03,13.75 23.89,12.88 25.32,12.85" fill="#fc0" /></svg>',
+        gb: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect width="36" height="36" fill="#012169"/><path d="M0 0L36 36M36 0L0 36" stroke="#fff" stroke-width="7"/><path d="M0 0L36 36M36 0L0 36" stroke="#c8102e" stroke-width="2.4"/><path d="M18 0V36M0 18H36" stroke="#fff" stroke-width="11"/><path d="M18 0V36M0 18H36" stroke="#c8102e" stroke-width="6.5"/></svg>',
+        jp: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#fff"/><circle cx="18" cy="18" r="9" fill="#bc002d" /></svg>',
+        au: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#00247d"/><g transform="scale(.5)"><rect width="36" height="36" fill="#012169"/><path d="M0 0L36 36M36 0L0 36" stroke="#fff" stroke-width="7"/><path d="M0 0L36 36M36 0L0 36" stroke="#c8102e" stroke-width="2.4"/><path d="M18 0V36M0 18H36" stroke="#fff" stroke-width="11"/><path d="M18 0V36M0 18H36" stroke="#c8102e" stroke-width="6.5"/></g><polygon points="9.00,22.80 9.99,25.64 12.99,25.70 10.60,27.52 11.47,30.40 9.00,28.68 6.53,30.40 7.40,27.52 5.01,25.70 8.01,25.64" fill="#fff" /><polygon points="27.00,6.00 27.47,7.35 28.90,7.38 27.76,8.25 28.18,9.62 27.00,8.80 25.82,9.62 26.24,8.25 25.10,7.38 26.53,7.35" fill="#fff" /><polygon points="22.00,14.00 22.47,15.35 23.90,15.38 22.76,16.25 23.18,17.62 22.00,16.80 20.82,17.62 21.24,16.25 20.10,15.38 21.53,15.35" fill="#fff" /><polygon points="32.00,16.00 32.47,17.35 33.90,17.38 32.76,18.25 33.18,19.62 32.00,18.80 30.82,19.62 31.24,18.25 30.10,17.38 31.53,17.35" fill="#fff" /><polygon points="27.00,27.00 27.47,28.35 28.90,28.38 27.76,29.25 28.18,30.62 27.00,29.80 25.82,30.62 26.24,29.25 25.10,28.38 26.53,28.35" fill="#fff" /></svg>',
+        ca: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#fff"/><rect x="0" y="0" width="9" height="36" fill="#d52b1e"/><rect x="27" y="0" width="9" height="36" fill="#d52b1e"/><polygon fill="#d52b1e" points="18,7 20.5,13 25,11.5 23.5,17 28,19 22,22 23,26 18.8,25 18.8,30 17.2,30 17.2,25 13,26 14,22 8,19 12.5,17 11,11.5 15.5,13"/></svg>',
+        ch: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#d52b1e"/><rect x="15" y="7" width="6" height="22" fill="#fff"/><rect x="7" y="15" width="22" height="6" fill="#fff"/></svg>',
+        nz: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#012169"/><g transform="scale(.5)"><rect width="36" height="36" fill="#012169"/><path d="M0 0L36 36M36 0L0 36" stroke="#fff" stroke-width="7"/><path d="M0 0L36 36M36 0L0 36" stroke="#c8102e" stroke-width="2.4"/><path d="M18 0V36M0 18H36" stroke="#fff" stroke-width="11"/><path d="M18 0V36M0 18H36" stroke="#c8102e" stroke-width="6.5"/></g><polygon points="27.00,7.40 27.61,9.16 29.47,9.20 27.99,10.32 28.53,12.10 27.00,11.04 25.47,12.10 26.01,10.32 24.53,9.20 26.39,9.16" fill="#cc142b" stroke="#fff" stroke-width=".6"/><polygon points="27.00,26.40 27.61,28.16 29.47,28.20 27.99,29.32 28.53,31.10 27.00,30.04 25.47,31.10 26.01,29.32 24.53,28.20 26.39,28.16" fill="#cc142b" stroke="#fff" stroke-width=".6"/><polygon points="22.00,16.40 22.61,18.16 24.47,18.20 22.99,19.32 23.53,21.10 22.00,20.04 20.47,21.10 21.01,19.32 19.53,18.20 21.39,18.16" fill="#cc142b" stroke="#fff" stroke-width=".6"/><polygon points="32.00,16.40 32.61,18.16 34.47,18.20 32.99,19.32 33.53,21.10 32.00,20.04 30.47,21.10 31.01,19.32 29.53,18.20 31.39,18.16" fill="#cc142b" stroke="#fff" stroke-width=".6"/></svg>',
+        pk: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#01411c"/><rect x="0" y="0" width="9" height="36" fill="#fff"/><circle cx="22" cy="18" r="8" fill="#fff" /><circle cx="24.5" cy="16.5" r="6.6" fill="#01411c" /><polygon points="27.00,11.10 27.56,12.72 29.28,12.76 27.91,13.80 28.41,15.44 27.00,14.46 25.59,15.44 26.09,13.80 24.72,12.76 26.44,12.72" fill="#fff" /></svg>',
+        id: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="18" fill="#ce1126"/><rect x="0" y="18" width="36" height="18" fill="#fff"/></svg>',
+        in: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="12" fill="#f93"/><rect x="0" y="12" width="36" height="12" fill="#fff"/><rect x="0" y="24" width="36" height="12" fill="#138808"/><circle cx="18" cy="18" r="3.8" fill="none" stroke="#008" stroke-width="1"/><circle cx="18" cy="18" r="0.8" fill="#008" /></svg>',
+        br: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#009c3b"/><polygon points="18,4 34,18 18,32 2,18" fill="#ffdf00"/><circle cx="18" cy="18" r="7" fill="#002776" /><path d="M11.2 17Q18 14 24.8 19" stroke="#fff" stroke-width="1.4" fill="none"/></svg>',
+        ar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#74acdf"/><rect x="0" y="12" width="36" height="12" fill="#fff"/><circle cx="18" cy="18" r="3" fill="#f6b40e" /></svg>',
+        co: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="18" fill="#fcd116"/><rect x="0" y="18" width="36" height="9" fill="#003893"/><rect x="0" y="27" width="36" height="9" fill="#ce1126"/></svg>',
+        mx: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="12" height="36" fill="#006847"/><rect x="12" y="0" width="12" height="36" fill="#fff"/><rect x="24" y="0" width="12" height="36" fill="#ce1126"/><circle cx="18" cy="18" r="3.8" fill="#8b5a2b" /></svg>',
+        ng: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="12" height="36" fill="#008751"/><rect x="12" y="0" width="12" height="36" fill="#fff"/><rect x="24" y="0" width="12" height="36" fill="#008751"/></svg>',
+        eg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="12" fill="#ce1126"/><rect x="0" y="12" width="36" height="12" fill="#fff"/><rect x="0" y="24" width="36" height="12" fill="#000"/><circle cx="18" cy="18" r="3" fill="#c09300" /></svg>',
+        bd: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#006a4e"/><circle cx="16" cy="18" r="9" fill="#f42a41" /></svg>',
+        ph: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="18" fill="#0038a8"/><rect x="0" y="18" width="36" height="18" fill="#ce1126"/><polygon points="0,0 19,18 0,36" fill="#fff"/><circle cx="6" cy="18" r="2.8" fill="#fcd116" /></svg>',
+        dz: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="18" height="36" fill="#006233"/><rect x="18" y="0" width="18" height="36" fill="#fff"/><circle cx="18" cy="18" r="7" fill="#d21034" /><circle cx="19.8" cy="18" r="5.6" fill="#fff" /><polygon points="21.00,15.40 21.61,17.16 23.47,17.20 21.99,18.32 22.53,20.10 21.00,19.04 19.47,20.10 20.01,18.32 18.53,17.20 20.39,17.16" fill="#d21034" /></svg>',
+        za: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="18" fill="#de3831"/><rect x="0" y="18" width="36" height="18" fill="#002395"/><path d="M0 3L16 18L36 18M0 33L16 18" stroke="#fff" stroke-width="9" fill="none"/><path d="M0 3L16 18L36 18M0 33L16 18" stroke="#007a4d" stroke-width="5" fill="none"/><polygon points="0,4 0,32 14,18" fill="#000" stroke="#ffb612" stroke-width="2"/></svg>',
+        cn: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#de2910"/><polygon points="9.00,4.00 10.18,7.38 13.76,7.45 10.90,9.62 11.94,13.05 9.00,11.00 6.06,13.05 7.10,9.62 4.24,7.45 7.82,7.38" fill="#ffde00" /><polygon points="18.00,2.20 18.42,3.42 19.71,3.44 18.68,4.22 19.06,5.46 18.00,4.72 16.94,5.46 17.32,4.22 16.29,3.44 17.58,3.42" fill="#ffde00" /><polygon points="22.00,7.20 22.42,8.42 23.71,8.44 22.68,9.22 23.06,10.46 22.00,9.72 20.94,10.46 21.32,9.22 20.29,8.44 21.58,8.42" fill="#ffde00" /><polygon points="22.00,13.20 22.42,14.42 23.71,14.44 22.68,15.22 23.06,16.46 22.00,15.72 20.94,16.46 21.32,15.22 20.29,14.44 21.58,14.42" fill="#ffde00" /><polygon points="18.00,18.20 18.42,19.42 19.71,19.44 18.68,20.22 19.06,21.46 18.00,20.72 16.94,21.46 17.32,20.22 16.29,19.44 17.58,19.42" fill="#ffde00" /></svg>',
+        fr: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="12" height="36" fill="#0055a4"/><rect x="12" y="0" width="12" height="36" fill="#fff"/><rect x="24" y="0" width="12" height="36" fill="#ef4135"/></svg>',
+        hk: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#de2910"/><ellipse cx="18" cy="12.5" rx="2.4" ry="5" fill="#fff" transform="rotate(0 18 18)"/><ellipse cx="18" cy="12.5" rx="2.4" ry="5" fill="#fff" transform="rotate(72 18 18)"/><ellipse cx="18" cy="12.5" rx="2.4" ry="5" fill="#fff" transform="rotate(144 18 18)"/><ellipse cx="18" cy="12.5" rx="2.4" ry="5" fill="#fff" transform="rotate(216 18 18)"/><ellipse cx="18" cy="12.5" rx="2.4" ry="5" fill="#fff" transform="rotate(288 18 18)"/></svg>',
+        es: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#c60b1e"/><rect x="0" y="9" width="36" height="18" fill="#ffc400"/><rect x="8" y="13" width="5" height="10" fill="#ad1519"/></svg>',
         un: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect x="0" y="0" width="36" height="36" fill="#555"/></svg>',
       };
       function flagImg(c) {
@@ -1890,10 +2035,17 @@
             f: n
               .slice(0, 7)
               .split("/")
-              .map((x) => flagImg("un"))
+              .map((x) => flagImg(CC[x] || "un"))
               .join(""),
           }));
-        return MKD.stk.map((x) => ({ n: x[0], f: flagImg("un") }));
+        if (t === "stk")
+          return MKD.stk.map((x) => ({ n: x[0], f: flagImg(x[1]) }));
+        return MKD[t].map((x) => ({
+          n: x[0],
+          f:
+            `<span class="cn" style="background:${x[2]}">${x[1]}</span>` +
+            flagImg("us"),
+        }));
       }
       function mkAll() {
         return TABS.flatMap((t) => mkItems(t[0]));
@@ -1979,6 +2131,7 @@
         if (it) pickMk(it.dataset.n);
       });
       mkSync();
+
       function saveBal() {
         if (!S.tr.length) {
           alert("No trades yet");
@@ -2019,9 +2172,6 @@
         x.fillStyle = "#7d8190";
         x.font = "700 12px " + M;
         x.fillText("BALANCE \u00b7 " + new Date().toLocaleString(), 20, 56);
-        const pr = b - S.cap,
-          w = S.tr.filter((t) => t.r === "P").length,
-          l = S.tr.filter((t) => t.r === "L").length;
         x.fillStyle = "#f4f4f1";
         x.font = "700 14px " + F;
         x.fillText("Start " + f(S.cap) + "   Now " + f(b), 20, 84);
